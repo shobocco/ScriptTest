@@ -3,7 +3,7 @@ using UnityEngine;
 public class NewMonoBehaviourScript : MonoBehaviour
 {
 
-    private Boss boss = new Boss();
+    private Boss boss = new Boss(53);
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -30,7 +30,11 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
 public class Boss{
 
-    private int mp = 53;
+    private int mp = 0;
+
+    public Boss(int mp){
+        this.mp = mp;
+    }
 
     public void Magic(){
         if(this.mp - 5 >= 0){
